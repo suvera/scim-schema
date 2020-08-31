@@ -89,7 +89,6 @@ abstract class ListResponse extends SchemaBase implements SerializableInterface
             } elseif (!is_array($resource)) {
                 throw new \InvalidArgumentException('Resource must implement SerializableInterface or already be serialized to array');
             }
-            $result['Resources'][] = $resource;
         }
 
         return $result;

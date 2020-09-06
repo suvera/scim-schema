@@ -39,9 +39,7 @@ class Filter extends AbstractSPCItem
     {
         $result = parent::serializeObject();
 
-        if ($this->isSupported()) {
-            $result['maxResults'] = $this->maxResults;
-        }
+        $result['maxResults'] = intval($this->maxResults);
 
         return $result;
     }

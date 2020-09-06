@@ -52,10 +52,8 @@ class Bulk extends AbstractSPCItem
     {
         $result = parent::serializeObject();
 
-        if ($this->isSupported()) {
-            $result['maxOperations'] = $this->maxOperations;
-            $result['maxPayloadSize'] = $this->maxPayloadSize;
-        }
+        $result['maxOperations'] = intval($this->maxOperations);
+        $result['maxPayloadSize'] = intval($this->maxPayloadSize);
 
         return $result;
     }

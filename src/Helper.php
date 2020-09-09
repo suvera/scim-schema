@@ -34,11 +34,7 @@ abstract class Helper
 
     public static function dateTime2string(\DateTime $dateTime)
     {
-        if ($dateTime->getTimezone()->getName() === \DateTimeZone::UTC) {
-            return $dateTime->format('Y-m-d\TH:i:s\Z');
-        } else {
-            return $dateTime->format('Y-m-d\TH:i:sP'); // ???
-        }
+        return $dateTime->format('Y-m-d\TH:i:s\Z');
     }
 
     /**
